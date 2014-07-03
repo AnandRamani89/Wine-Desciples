@@ -1,0 +1,174 @@
+
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Last login: Tue Jul  1 11:04:56 2014 from 103.249.82.26
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2014.03-release-notes/
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ htpasswd -cm/etc/svn-auth-users winedesciples
+Usage:
+        htpasswd [-cmdpsD] passwordfile username
+        htpasswd -b[cmdpsD] passwordfile username password
+
+        htpasswd -n[mdps] username
+        htpasswd -nb[mdps] username password
+ -c  Create a new file.
+ -n  Don't update file; display results on stdout.
+ -m  Force MD5 encryption of the password (default).
+ -d  Force CRYPT encryption of the password.
+ -p  Do not encrypt the password (plaintext).
+ -s  Force SHA encryption of the password.
+ -b  Use the password from the command line rather than prompting for it.
+ -D  Delete the specified user.
+On other systems than Windows, NetWare and TPF the '-p' flag will probably not work.
+The SHA algorithm does not use a salt and is less secure than the MD5 algorithm.
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ svn
+Type 'svn help' for usage.
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ svn help
+usage: svn <subcommand> [options] [args]
+Subversion command-line client, version 1.8.8.
+Type 'svn help <subcommand>' for help on a specific subcommand.
+Type 'svn --version' to see the program version and RA modules
+  or 'svn --version --quiet' to see just the version number.
+
+Most subcommands take file and/or directory arguments, recursing
+on the directories.  If no arguments are supplied to such a
+command, it recurses on the current directory (inclusive) by default.
+
+Available subcommands:
+   add
+   blame (praise, annotate, ann)
+   cat
+   changelist (cl)
+   checkout (co)
+   cleanup
+   commit (ci)
+   copy (cp)
+   delete (del, remove, rm)
+   diff (di)
+   export
+   help (?, h)
+   import
+   info
+   list (ls)
+   lock
+   log
+   merge
+   mergeinfo
+   mkdir
+   move (mv, rename, ren)
+   patch
+   propdel (pdel, pd)
+   propedit (pedit, pe)
+   propget (pget, pg)
+   proplist (plist, pl)
+   propset (pset, ps)
+   relocate
+   resolve
+   resolved
+   revert
+   status (stat, st)
+   switch (sw)
+   unlock
+   update (up)
+   upgrade
+
+Subversion is a tool for version control.
+For additional information, see http://subversion.apache.org/
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ htpasswd -cm/etc/svn-users winedesciples
+Usage:
+        htpasswd [-cmdpsD] passwordfile username
+        htpasswd -b[cmdpsD] passwordfile username password
+
+        htpasswd -n[mdps] username
+        htpasswd -nb[mdps] username password
+ -c  Create a new file.
+ -n  Don't update file; display results on stdout.
+ -m  Force MD5 encryption of the password (default).
+ -d  Force CRYPT encryption of the password.
+ -p  Do not encrypt the password (plaintext).
+ -s  Force SHA encryption of the password.
+ -b  Use the password from the command line rather than prompting for it.
+ -D  Delete the specified user.
+On other systems than Windows, NetWare and TPF the '-p' flag will probably not work.
+The SHA algorithm does not use a salt and is less secure than the MD5 algorithm.
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ htpasswd -m/etc/svn-users winedesciples
+Usage:
+        htpasswd [-cmdpsD] passwordfile username
+        htpasswd -b[cmdpsD] passwordfile username password
+
+        htpasswd -n[mdps] username
+        htpasswd -nb[mdps] username password
+ -c  Create a new file.
+ -n  Don't update file; display results on stdout.
+ -m  Force MD5 encryption of the password (default).
+ -d  Force CRYPT encryption of the password.
+ -p  Do not encrypt the password (plaintext).
+ -s  Force SHA encryption of the password.
+ -b  Use the password from the command line rather than prompting for it.
+ -D  Delete the specified user.
+On other systems than Windows, NetWare and TPF the '-p' flag will probably not work.
+The SHA algorithm does not use a salt and is less secure than the MD5 algorithm.
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ svn --version
+svn, version 1.8.8 (r1568071)
+   compiled Mar 27 2014, 23:47:04 on x86_64-redhat-linux-gnu
+
+Copyright (C) 2013 The Apache Software Foundation.
+This software consists of contributions made by many people;
+see the NOTICE file for more information.
+Subversion is open source software, see http://subversion.apache.org/
+
+The following repository access (RA) modules are available:
+
+* ra_svn : Module for accessing a repository using the svn network protocol.
+  - with Cyrus SASL authentication
+  - handles 'svn' scheme
+* ra_local : Module for accessing a repository on local disk.
+  - handles 'file' scheme
+* ra_serf : Module for accessing a repository via WebDAV protocol using serf.
+  - using serf 1.3.4
+  - handles 'http' scheme
+  - handles 'https' scheme
+
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ yum install subversion
+Loaded plugins: priorities, update-motd, upgrade-helper
+You need to be root to perform this command.
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ sudo nano /etc/httpd/conf.d/subversion.conf
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ htpasswd -c/etc/svn-auth-user winedesciples
+Usage:
+        htpasswd [-cmdpsD] passwordfile username
+        htpasswd -b[cmdpsD] passwordfile username password
+
+        htpasswd -n[mdps] username
+        htpasswd -nb[mdps] username password
+ -c  Create a new file.
+ -n  Don't update file; display results on stdout.
+ -m  Force MD5 encryption of the password (default).
+ -d  Force CRYPT encryption of the password.
+ -p  Do not encrypt the password (plaintext).
+ -s  Force SHA encryption of the password.
+ -b  Use the password from the command line rather than prompting for it.
+ -D  Delete the specified user.
+On other systems than Windows, NetWare and TPF the '-p' flag will probably not work.
+The SHA algorithm does not use a salt and is less secure than the MD5 algorithm.
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ htpasswd -c /etc/svn-auth-user winedesciples
+htpasswd: cannot create file /etc/svn-auth-user
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ sudo htpasswd -c /etc/svn-auth-user winedesciples
+New password:
+Re-type new password:
+Adding password for user winedesciples
+[ec2-user@domU-12-31-39-0C-70-2C ~]$ cd /etc/
+[ec2-user@domU-12-31-39-0C-70-2C etc]$ cd /var/www/svn
+-bash: cd: /var/www/svn: No such file or directory
+[ec2-user@domU-12-31-39-0C-70-2C etc]$ cd /
+[ec2-user@domU-12-31-39-0C-70-2C /]$ cd /etc
+[ec2-user@domU-12-31-39-0C-70-2C etc]$ sudo nano /etc/httpd/conf.d/subversion.conf
+[ec2-user@domU-12-31-39-0C-70-2C etc]$ /etc
+-bash: /etc: is a directory
+[ec2-user@domU-12-31-39-0C-70-2C etc]$ cd ..
+[ec2-user@domU-12-31-39-0C-70-2C /]$ ^C
+[ec2-user@domU-12-31-39-0C-70-2C /]$ ^C
+[ec2-user@domU-12-31-39-0C-70-2C /]$

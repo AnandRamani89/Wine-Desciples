@@ -1,0 +1,18 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-centos-6
+http://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html
+http://www.if-not-true-then-false.com/2010/install-svn-subversion-server-on-fedora-centos-red-hat-rhel/
+http://www.tutorialspoint.com/svn/svn_environment.htm
+http://tecadmin.net/setup-svn-subversion-server-on-centosrhel-56-fedora/#
+http://mintaka.sdsu.edu/reu/nano.html
+http://wiki.centos.org/HowTos/Subversion
+
+
+Git Hub
+------------
+http://git-scm.com/download/linux
+https://help.github.com/articles/which-remote-url-should-i-use#cloning-with-https
+https://help.github.com/articles/generating-ssh-keys
+https://help.github.com/articles/set-up-git#platform-linux
+https://help.github.com/articles/create-a-repo
+https://github.com/settings/ssh
+
